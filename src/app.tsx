@@ -24,15 +24,15 @@ export function createApp(config: RigConfig = loadConfig()) {
     const night = readNight(config.runsDir, c.req.param('night'));
     if (night === null) {
       return c.html(
-        <Layout title={`digest · ${c.req.param('night')}`} lane={lane()}>
-          <h1>digest · {c.req.param('night')}</h1>
+        <Layout title={`digest Â· ${c.req.param('night')}`} lane={lane()}>
+          <h1>digest Â· {c.req.param('night')}</h1>
           <p class="mute">no run log for that night</p>
         </Layout>,
         404,
       );
     }
     return c.html(
-      <Layout title={`digest · ${night.night}`} lane={lane()}>
+      <Layout title={`digest Â· ${night.night}`} lane={lane()}>
         <DigestView night={night} />
       </Layout>,
     );
