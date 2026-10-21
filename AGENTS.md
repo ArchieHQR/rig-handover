@@ -30,6 +30,15 @@ Read first: `docs/vision.md`, `docs/styleguide.md`. Decisions: `docs/adr/`.
 5. An issue is closed only when its "Done when" holds. If it can't hold yet, leave it open and
    say what it waits on.
 
+## What every issue carries
+
+Decided by the human at the review of the morning-digest split (2026-10-21):
+
+- First line: `Source: plan.md § <n>`.
+- Label: `plan:<plan name>` (e.g. `plan:morning-digest`).
+- Sections: Scope, Done when, Blocked by.
+- Last line: `Close only when Done when holds, with the AGENTS.md closing comment (done: / worker: <harness> · <model> · <effort> / commit:).`
+
 ## Skills
 
 Shared skills live in `.agents/skills/`, one folder each, `SKILL.md` inside. That folder is the
