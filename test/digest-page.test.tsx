@@ -11,6 +11,9 @@ describe('digest page', () => {
     for (const job of ['rig/rotate-logs', 'lane/sync', 'fixtures/refresh', 'notes/backup', 'digest/render']) {
       expect(html).toContain(job);
     }
+    expect(html).toContain('<title>rig · digest · 2026-10-28</title>');
+    expect(html).not.toContain('<td></td>');
+    expect(html).toMatch(/<tr><td>—</td><td>digest/render/);
     expect(html).toMatch(/digest\/render<\/td><td>—<\/td>/);
     expect(html).toMatch(/<tr class="warn"><td>!<\/td><td>fixtures\/refresh/);
     expect(html).toMatch(/<tr class="warn"><td>!<\/td><td>notes\/backup/);

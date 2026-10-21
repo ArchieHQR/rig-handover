@@ -28,7 +28,7 @@ export function DigestView({ night }: { night: Night }) {
               const warn = r.retries >= 3 || r.lastStatus === 'fail';
               return (
                 <tr class={warn ? 'warn' : undefined}>
-                  <td>{warn ? '!' : ''}</td>
+                  <td>{warn ? '!' : dash}</td>
                   <td>{r.job}</td>
                   <td>{r.owner ?? dash}</td>
                   <td>{r.runs}</td>
